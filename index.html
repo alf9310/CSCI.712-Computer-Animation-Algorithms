@@ -42,14 +42,48 @@
     </p>
 
     <div class="game-container">
-        <h2>Animation Framework</h2>
-        <iframe src="games/Assignment_0/Assignment_0.html"></iframe>
+        <h2>Billiards</h2>
+        <iframe src="games/Assignment_2_Billards/billards-web-build/billards-web-build.html"></iframe>
         <p>
-            Used Godot to create the framework and testbed for the animation techniques to be explored during the
-            semester. Teapot model from <a
-                href="https://www.cgtrader.com/free-3d-models/household/kitchenware/old-rusty-metal-kettle-19a1dd9a-774d-430d-924d-5d28c65b6d43">CGTrader</a>.
+            Implemented a physical simulation of a billiards shot based on rigid body dynamics and momentum-based motion
+            integration.
+            The simulation models both <strong>sliding</strong> and <strong>rolling friction</strong>, accurately
+            transitioning between them when the velocity of the point of contact matches
+            the ball's center of mass velocity (indicating full roll). Forces, torques, and impulses are integrated over
+            time to update
+            translational and rotational momentum, allowing realistic ball motion and collisions.
+        </p>
+        <ul style="text-align: left;">
+            <li>Sliding friction modeled until full roll is detected; then rolling friction takes over with a different
+                coefficient.</li>
+            <li>Momentum-based integration framework used for both linear and angular motion.</li>
+            <li>Collision detection and response handled using impulse calculations to update momentum post-impact.</li>
+            <li>Simulation parameters specify ball color, position, and initial linear and rotational momentum.</li>
+            <li>Demonstrates the effects of varying coefficients of restitution and friction on ball interactions.</li>
+        </ul>
+
+        <p>
+            Controls:
+        <ul style="text-align: left; display: inline-block; margin-top: 0;">
+            <li>WASD / Arrow Keys: Move Cue Stick</li>
+            <li>Enter / Spacebar: Shoot</li>
+        </ul>
+        </p>
+
+        <p>
+            Basic Shoot
+            <iframe src="games/Assignment_2_Billards/videos/normal_shot.avi"></iframe>
+        </p>
+        <p>
+            Basic shot with heavy coefficient of restitution
+            <iframe src="games/Assignment_2_Billards/videos/heavy_coeff_of_restitution.avi"></iframe>
+        </p>
+        <p>
+            Basic shot with heavy friction
+            <iframe src="games/Assignment_2_Billards/videos/heavy_friction.avi"></iframe>
         </p>
     </div>
+
 
     <div class="game-container">
         <h2>Keyframing</h2>
@@ -65,6 +99,16 @@
             <li>Custom Easing Graph to control the speed of the animation along the spline.</li>
             <li>Implements Casteljau Construction of position and rotation variables for efficient evaluation.</li>
         </ul>
+    </div>
+
+    <div class="game-container">
+        <h2>Animation Framework</h2>
+        <iframe src="games/Assignment_0/Assignment_0.html"></iframe>
+        <p>
+            Used Godot to create the framework and testbed for the animation techniques to be explored during the
+            semester. Teapot model from <a
+                href="https://www.cgtrader.com/free-3d-models/household/kitchenware/old-rusty-metal-kettle-19a1dd9a-774d-430d-924d-5d28c65b6d43">CGTrader</a>.
+        </p>
     </div>
 
 </body>
